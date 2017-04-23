@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>jQuery-Manipulating-Elements | y1seve的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Manipulating Elements完整的jQuery操作元素的方法见官方文档。
+Getting and Setting Information About Elements有许多方式去改变一个存在的元素。其中最常用的就是改变元素的inner HTML和属性。jQuery提供了简单，并且跨浏览器的方法来支持这些操作。你可以通过这些方法的getters的形势来获取关于元素的信息。下面是一些方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery-Manipulating-Elements">
+<meta property="og:url" content="http://yoursite.com/2017/04/23/jQuery-Manipulating-Elements/index.html">
+<meta property="og:site_name" content="y1seve的博客">
+<meta property="og:description" content="Manipulating Elements完整的jQuery操作元素的方法见官方文档。
+Getting and Setting Information About Elements有许多方式去改变一个存在的元素。其中最常用的就是改变元素的inner HTML和属性。jQuery提供了简单，并且跨浏览器的方法来支持这些操作。你可以通过这些方法的getters的形势来获取关于元素的信息。下面是一些方法">
+<meta property="og:updated_time" content="2017-04-23T12:59:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery-Manipulating-Elements">
+<meta name="twitter:description" content="Manipulating Elements完整的jQuery操作元素的方法见官方文档。
+Getting and Setting Information About Elements有许多方式去改变一个存在的元素。其中最常用的就是改变元素的inner HTML和属性。jQuery提供了简单，并且跨浏览器的方法来支持这些操作。你可以通过这些方法的getters的形势来获取关于元素的信息。下面是一些方法">
+  
+    <link rel="alternate" href="/atom.xml" title="y1seve的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">y1seve的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">好好写博客，好好跑步，好好看书，好好写代码。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-jQuery-Manipulating-Elements" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/23/jQuery-Manipulating-Elements/" class="article-date">
+  <time datetime="2017-04-23T11:17:57.000Z" itemprop="datePublished">2017-04-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery-Manipulating-Elements
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Manipulating-Elements"><a href="#Manipulating-Elements" class="headerlink" title="Manipulating Elements"></a>Manipulating Elements</h1><p>完整的jQuery操作元素的方法见<a href="http://api.jquery.com/category/manipulation/" target="_blank" rel="external">官方文档</a>。</p>
+<h2 id="Getting-and-Setting-Information-About-Elements"><a href="#Getting-and-Setting-Information-About-Elements" class="headerlink" title="Getting and Setting Information About Elements"></a>Getting and Setting Information About Elements</h2><p>有许多方式去改变一个存在的元素。其中最常用的就是改变元素的inner HTML和属性。jQuery提供了简单，并且跨浏览器的方法来支持这些操作。你可以通过这些方法的getters的形势来获取关于元素的信息。下面是一些方法：</p>
+<ul>
+<li>.html() - get or set the html contents.</li>
+<li>.text() - get or set the text contents; HTML will be stripped.</li>
+<li>.attr() - get or set the value of the provided attribute.</li>
+<li>.width() - get or set the width in pixels of the first element in the selection as an integer.</li>
+<li>.height() - get or set the height in pixels of the first element in the selection as an integer.</li>
+<li>.position() - get an object with position information for the first element in the selection, relative to its first positioned ancestor.This is a getter only.</li>
+<li>val() - get or set the value of form elements.</li>
+</ul>
+<p>改变元素的相关信息是很简单的，但是要记住的是这种改变会影响这次选择到的所有元素。如果你想改变的只是其中的一个元素，则需要在调用该方法的setter之前指明。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Changing the HTML of an element.</span></div><div class="line">$( <span class="string">"#myDiv p:first"</span> ).html( <span class="string">"New &lt;strong&gt;first&lt;/strong&gt; paragraph!"</span> );</div></pre></td></tr></table></figure>
+<h2 id="Moving-Copying-and-Removing-Elements"><a href="#Moving-Copying-and-Removing-Elements" class="headerlink" title="Moving, Copying, and Removing Elements"></a>Moving, Copying, and Removing Elements</h2><p>有许多方式在DOM中移动元素，一般有如下两种方式：</p>
+<ul>
+<li>相对另一个元素放置被选中的元素。</li>
+<li>相对被选中的元素放置某一个元素。</li>
+</ul>
+<p>例如，jQuery提供.insertAfter()和.after()方法。.insertAfter()方法是将被选中的元素放置于作为参数的那个元素的后面。.after()方法是将作为参数的那个元素放置于被选中的元素后面。其他的方法都是遵循此规则：.insertBefore() .before()   .appendTo() .append()  .prependTo() .prepend()</p>
+<p>选取什么方法取决被选中的元素，和你是否需要存储你要添加到页面的元素的引用。如果你需要存储引用，则你该选取第一种方式，即相对于作为参数的元素 放置 被选中的元素。如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Moving elements using different approaches.</span></div><div class="line"> </div><div class="line"><span class="comment">// Make the first list item the last list item:</span></div><div class="line"><span class="keyword">var</span> li = $( <span class="string">"#myList li:first"</span> ).appendTo( <span class="string">"#myList"</span> );</div><div class="line"> </div><div class="line"><span class="comment">// Another approach to the same problem:</span></div><div class="line">$( <span class="string">"#myList"</span> ).append( $( <span class="string">"#myList li:first"</span> ) );</div><div class="line"> </div><div class="line"><span class="comment">// Note that there's no way to access the list item</span></div><div class="line"><span class="comment">// that we moved, as this returns the list itself.</span></div></pre></td></tr></table></figure>
+<h2 id="Cloning-Elements"><a href="#Cloning-Elements" class="headerlink" title="Cloning Elements"></a>Cloning Elements</h2><p>.appendTo()方法是移动元素，但是有时候需要该元素的复制体，这时候就可以用.clone()方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Making a copy of an element.</span></div><div class="line"> </div><div class="line"><span class="comment">// Copy the first list item to the end of the list:</span></div><div class="line">$( <span class="string">"#myList li:first"</span> ).clone().appendTo( <span class="string">"#myList"</span> );</div></pre></td></tr></table></figure>
+<p>如果你需要复制该元素相关的数据和事件，则可照此调用.clone(true)。</p>
+<h2 id="Removing-Elements"><a href="#Removing-Elements" class="headerlink" title="Removing Elements"></a>Removing Elements</h2><p>可以使用.remove()和.detach()方法来从页面中移除元素。当你想从页面中永久移除被选择的元素时可以使用.remove()方法。当调用.remove()方法时，会返回已经移除的所有元素，如果你再次将这些元素再添加到页面中去，那这些元素已经没有移除前关联的数据和事件了。</p>
+<p>然而.detach()方法依然会有移除前关联的数据和事件。</p>
+<p>.detach()方法在你频繁操作元素的时候特别有用。比如，你可以使用.detach()方法来从页面移除元素，然后代码会继续执行某件任务，当这件任务完成后，你又将先前移除的元素又添加到页面。这就会在维持元素的数据和事件方面减少 “DOM touches”的消耗。</p>
+<p>如果你想将某一个元素留在页面，但是移除该元素的内容，那么你可以使用.empty()方法去清除该元素的inner HTML.</p>
+<h2 id="Creating-New-Elements"><a href="#Creating-New-Elements" class="headerlink" title="Creating New Elements"></a>Creating New Elements</h2><p>jQuery提供了优雅的方式去创建新的元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Creating new elements from an HTML string.</span></div><div class="line">$( <span class="string">"&lt;p&gt;This is a new paragraph&lt;/p&gt;"</span> );</div><div class="line">$( <span class="string">"&lt;li class=\"new\"&gt;new list item&lt;/li&gt;"</span> );</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$( <span class="string">"&lt;a/&gt;"</span>, &#123;</div><div class="line">    <span class="attr">html</span>: <span class="string">"This is a &lt;strong&gt;new&lt;/strong&gt; link"</span>,</div><div class="line">    <span class="string">"class"</span>: <span class="string">"new"</span>,</div><div class="line">    <span class="attr">href</span>: <span class="string">"foo.html"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>注意上述属性对象的第二个参数，被括号括起来了。而html和href参数却没有被括号括起来。属性名一般都不会被括起来，除非是 保留关键字。保留关键字的<a href="https://mathiasbynens.be/notes/reserved-keywords" target="_blank" rel="external">官方文档</a>。</p>
+<p>当你创建完一个新的元素时，该元素并没有马上被添加到页面中去。有几种方式可以将创建的元素添加到页面中去。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Getting a new element on to the page.</span></div><div class="line"> </div><div class="line"><span class="keyword">var</span> myNewElement = $( <span class="string">"&lt;p&gt;New element&lt;/p&gt;"</span> );</div><div class="line"> </div><div class="line">myNewElement.appendTo( <span class="string">"#content"</span> );</div><div class="line"> </div><div class="line">myNewElement.insertAfter( <span class="string">"ul:last"</span> ); <span class="comment">// This will remove the p from #content!</span></div><div class="line"> </div><div class="line">$( <span class="string">"ul"</span> ).last().after( myNewElement.clone() ); <span class="comment">// Clone the p so now we have two.</span></div></pre></td></tr></table></figure>
+<p>创建的元素其实不需要存储到变量中去，你可以直接在该方法后将该元素添加到页面中去。但是，大多数时候，你还是想要这个创建的新的元素的索引，这样你就不需要后面再去选择该元素了。可以直接使用。</p>
+<p>你可以在添加元素的时候创建新的元素，但是这时需要注意的是你就拿不到这个新创建的元素的索引了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Creating and adding an element to the page at the same time.</span></div><div class="line">$( <span class="string">"ul"</span> ).append( <span class="string">"&lt;li&gt;list item&lt;/li&gt;"</span> );</div></pre></td></tr></table></figure>
+<p>因为添加新的元素的语法如此简单，所以很容易忘记向DOM重复添加元素是很大的性能开销。如果你想添加很多元素到同一个容器，那么你可以想所有的HTML连结成一个单独的string，然后将这个string添加到容器中，而不是向容器中一次添加一个元素。可以使用一个数组来收集所有的HTML块，然后一起添加到容器中。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myItems = [];</div><div class="line"><span class="keyword">var</span> myList = $( <span class="string">"#myList"</span> );</div><div class="line"> </div><div class="line"><span class="keyword">for</span> ( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++ ) &#123;</div><div class="line">    myItems.push( <span class="string">"&lt;li&gt;item "</span> + i + <span class="string">"&lt;/li&gt;"</span> );</div><div class="line">&#125;</div><div class="line"> </div><div class="line">myList.append( myItems.join( <span class="string">""</span> ) );</div></pre></td></tr></table></figure>
+<h2 id="Manipulating-Attributes"><a href="#Manipulating-Attributes" class="headerlink" title="Manipulating Attributes"></a>Manipulating Attributes</h2><p>jQuery的属性操作能力是很容易扩展的。对属性作基本的改变是很简单的，但.attr()方法也支持更加复杂的操作。该方法不仅可以设置 很明显的值，也可以用函数的返回值来设置值。当设置值使用函数语法时，这函数接受两个参数，从0开始的选择到的元素的索引，和准备改变的属性的当前的值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Manipulating a single attribute.</span></div><div class="line">$( <span class="string">"#myDiv a:first"</span> ).attr( <span class="string">"href"</span>, <span class="string">"newDestination.html"</span> );</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Manipulating multiple attributes.</span></div><div class="line">$( <span class="string">"#myDiv a:first"</span> ).attr(&#123;</div><div class="line">    <span class="attr">href</span>: <span class="string">"newDestination.html"</span>,</div><div class="line">    <span class="attr">rel</span>: <span class="string">"nofollow"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Using a function to determine an attribute's new value.</span></div><div class="line">$( <span class="string">"#myDiv a:first"</span> ).attr(&#123;</div><div class="line">    <span class="attr">rel</span>: <span class="string">"nofollow"</span>,</div><div class="line">    <span class="attr">href</span>: <span class="function"><span class="keyword">function</span>(<span class="params"> idx, href </span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"/new/"</span> + href;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"> </div><div class="line">$( <span class="string">"#myDiv a:first"</span> ).attr( <span class="string">"href"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"> idx, href </span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"/new/"</span> + href;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/04/23/jQuery-Manipulating-Elements/" data-id="cj1upflqi00019c0d8epkvl50" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/23/jQuery-Working-with-Selections/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jQuery_Working_with_Selections</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Get-Started/">Get Started</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Get-Started/" style="font-size: 10px;">Get Started</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Arkiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Siste innlegg</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/23/jQuery-Manipulating-Elements/">jQuery-Manipulating-Elements</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/23/jQuery-Working-with-Selections/">jQuery_Working_with_Selections</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/23/jQuery_Selecting Elements/">jQuery_Selecting Elements</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/23/jQuery_Attributes/">jQuery_Attributes</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/23/Get-Started/">Get Started</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Martin Yu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
