@@ -304,7 +304,7 @@ div {
     border: 1px solid #DDD;
     text-align: center; }
     .page-navigator a:hover, .page-navigator span:hover {
-      background: #F8F8F8;
+      background: #eee;
       border-bottom-color: #D26911; }
     .page-navigator a.prev, .page-navigator span.prev {
       float: left; }
